@@ -1,0 +1,37 @@
+{
+  "name": "todolist",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "npm run watch:css && vite build",
+    "preview": "vite preview",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/index.css",
+    "watch": "chokidar \"./src/**/*.jsx\" -c \"npm run watch:css\"",
+    "dev": "concurrently \"npm run watch\" \"npm run start\""
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "firebase": "^9.18.0",
+    "nanoid": "^4.0.2",
+    "postcss-cli": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "tailwindcss-cli": "^0.1.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "chokidar-cli": "^3.0.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^2.2.19",
+    "vite": "^4.2.0"
+  }
+}
